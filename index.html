@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="./Assets/icons/icons-64-violet/globe-64.png" >
+
+    <title>Lateral</title>
+    
+  </head>
+  <body class="">
+    
+    <header style="padding-top: 0%;" class="container-md ">
+      <div class="row">
+        <div class="col-md-4"> LATERAL </div>
+        <nav class=" nav col-md-8">
+          
+          <li class="nav-item col justify-content-end">
+            <a  style="color: #0ad5eb;" class="nav-link active" aria-current="page" href="#">
+              HOME</a>
+          </li>
+              <li class="col nav-item dropdown justify-content-end">
+                <a style="color: black;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">FREAUTERES</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#Servicios">Feature</a></li>
+                  <li><a class="dropdown-item" href="#Apis">Apis</a></li>
+                  
+                  <li><a class="dropdown-item" href="#Quest">Questions</a></li>
+                </ul>
+          </li>
+          <li class="nav-item col justify-content-end" >
+            <a style="color: black;" class="nav-link active" aria-current="page" href="#pricing">PRICING</a>
+          </li>
+          <li class="nav-item col justify-content-end">
+            <a style="color: black;" class="nav-link active" aria-current="page" href="#contac">CONTAC</a>
+          </li>
+          <button style="padding: 0%; color: #0ad5eb; border-color:#0ad5eb ;" class="col-md"><td>LOGING</td></button>
+          <button class=" col-md ">GET STATED</button>
+        </nav>
+        
+        
+
+      </div>
+     
+
+    </header>
+    
+    <section class="container-md " id="Principal">
+      <div class="row">
+        <div class="col-md">
+          <h1 class="title" ><b> Buid aplicatiion <span style="color: rgb(135, 0, 231);"> faster</span></b></h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dicta ducimus reprehenderit tempora at eaque cupiditate odio numquam iusto accusantium pariatur distinctio, accusamus quod eligendi facere! Rem nostrum molestias pariatur.
+          </p>
+          <p style="color: #0ad5eb">For as low as <span style="color: rgb(135, 0, 231);"> $0.95</span> per user acount</p>
+          <button class="bt-mo" style=" background-color:#0ad5eb ;  border-color:#0ad5eb ;">WATCH DEMO <img class="img-fluid" src="Assets/btn-play.png" alt=""> </button>
+          <button   class="bt-mo">START NOW</button>
+        </div>
+        <div style="padding-top: 3%;" class=" col-md" id="SimuladorCredit">
+          <div class=" sim shadow-lg" >
+            <h4 style="text-align: center;" class="bold" >Simulador de cr&eacute;dito</h4>
+            <div style="padding-top: 3%; padding-bottom: 3%;" id="rangos">
+                <div>
+                  <label style="float: right ;" for="cantDes" class="form-label bold"><span> Monto Deseado</span></label>
+                  <div class="col-12" id="select">
+                    <div  id="selectValue"></div>
+                  </div>
+                  <input type="range" class="form-range"  min="10000" max="50000" id="cantDes" step="10000" value="10000" oninput="modvalue12(), modvalue24(), modvalue36(), selectNum(), Sim()" >
+                  
+                </div>
+                <div>
+                  <label style="float: right ;" for="tzAnual" class="form-label bold">Taza Anual</label>
+                  <div id="select1">
+                    <div class="select" id="selectValue1"></div>
+                  </div>
+                  <input type="range" class="form-range"  min="8.9" max="16.9" id="tzAnual" step="4" value="8.9" oninput="modvalue12(), modvalue24(), modvalue36(), selectTz(), Sim()">
+                  
+                </div>
+            </div>
+            <div class=" entra col-12" id="meses">
+              <h5 class="bold">Plazo en meses</h5>
+              <label class="bt-h col-3 " for="doce"><input class=" bt rounded-circle" id="doce" value="12" type="button" ></label>
+              <label class="bt-h col-3" for="veinti"><input class="bt rounded-circle" id="veinti" value="24" type="button" ></label>
+              <label class="bt-h col-3 " for="treinta"><input class=" bt rounded-circle" id="treinta" value="36" type="button"></label>
+                                  
+            </div>
+            <div class="entra col" id="result">
+                <div id="PagoMensual" class=" input-group mb-3">
+                  <span class="col-6 txtSim " id="">Pago Mensual</span>
+                  <output class=" rounded-pill col-6 out bold" id="pagMen" name="pagMen" >&dollar;833.34</output>
+                  
+                </div>
+                <div id="Comision" class="input-group mb-3">
+                  <span class=" col-6 txtSim " id="">Comicion por Apertura</span>
+                  <output class=" rounded-pill out col-6 bold" id="comi" name="comi"value="348" >&dollar;348.00</output>
+                  
+                </div>
+                <div id="MontoNeto" class="input-group mb-3">
+                  <span class="col-6 txtSim" id="">Monto Neto Depositado</span>
+                  <output  class=" rounded-pill out col-6 bold" id="monNet" name="monNet" >&dollar;9,652</output>
+                  
+                </div>
+                <div id="TotalPagar" class="input-group mb-3">
+                  <span class="col-6  txtSim" id="">Total Pagado</span>
+                  <output  class="out rounded-pill col-6 bold" id="totPag" name="totPag" >&dollar;11,238</output>
+                  
+                </div>
+                <div id="CAT" class="input-group mb-3">
+                  <span style="text-align: end;" class="col-6 txtSim" id="">CAT</span>
+                  <div  class="out rounded-pill col-6 bold"><output  id="cat" value="15.9" name="cat" >15.9%</output></div>
+                </div>
+            </div>
+            <div class="entra">
+              <button class="bt-mo" >SOLICITAR MI CREDITO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-md" id="Servicios">
+      <div class="row">
+        <h1 class="bold title text-center">Flexible Pricing</h1>
+        <div class="col">
+
+          <div class="col-md">
+            <img class="img- fluid" src="Assets/icons/icons-64-violet/responsive-64.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, quos id? Cumque ab assumenda earum, voluptate enim commodi sequi placeat aspernatur perferendis nobis sed, debitis doloribus ratione minus iure voluptatem?</p>
+          </div>
+        <div class="col-md">
+          <img class="img- fluid" src="Assets/icons/icons-64-violet/desktop-chart-64.png">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odit, officiis quo similique dolorum exercitationem soluta ullam possimus, velit sapiente atque magni architecto omnis delectus placeat deleniti porro. Sapiente, voluptates!</p>
+        </div>
+          
+        </div>
+        <div class="col">
+          <div class="col-md">
+            <img class="img- fluid" src="Assets/icons/icons-64-violet/browser-64.png">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio illo minus fuga, reprehenderit dolorem, soluta iure fugit magni explicabo delectus vel dolorum adipisci doloremque officiis, sint laudantium eaque incidunt similique.</p>
+          </div>
+          <div class="col-md">
+            <img class="img- fluid" src="Assets/icons/icons-64-violet/desktop-windows-64.png">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odio sequi aperiam. Repudiandae, dolor illo velit odit atque reprehenderit aut neque possimus veritatis voluptatem! Quis non blanditiis laboriosam eum eius.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col-md">
+            <img class="img- fluid" src="Assets/icons/icons-64-violet/customizer-64.png">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio illo minus fuga, reprehenderit dolorem, soluta iure fugit magni explicabo delectus vel dolorum adipisci doloremque officiis, sint laudantium eaque incidunt similique.</p>
+         
+          </div>
+          <div class="col-md">
+            <img class="img- fluid" src="Assets/icons/icons-64-violet/users-64.png">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio illo minus fuga, reprehenderit dolorem, soluta iure fugit magni explicabo delectus vel dolorum adipisci doloremque officiis, sint laudantium eaque incidunt similique.</p>
+         
+          </div>
+  
+        </div>
+      </div>
+      
+    </section>
+    <section class=" bg-dark p-2 text-dark" id="Apis">
+      <div class=" container-md">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center title">Easy to API</h2>
+            <p class="text-center col-md ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ex nihil, sequi nulla ab aspernatur sint quod autem magni illo fugiat expedita corrupti veritatis facere qui quasi ducimus saepe quaerat!</p>
+          
+          </div>
+          <div class="col-md-12 end-0"  id="ApisMenu">
+          <nav>
+            <div  class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="buttonHz nav-link active" id="nav-JS-tab" data-bs-toggle="tab" data-bs-target="#nav-JS" type="button" role="tab" aria-controls="nav-JS" aria-selected="true">Initializing JS</button>
+              <button class="buttonHz nav-link" id="nav-Css-tab" data-bs-toggle="tab" data-bs-target="#nav-Css" type="button" role="tab" aria-controls="nav-Css" aria-selected="false">Configuration CSS</button>
+              <button class="buttonHz nav-link" id="nav-Api-tab" data-bs-toggle="tab" data-bs-target="#nav-Api" type="button" role="tab" aria-controls="nav-Api" aria-selected="false">Security levels API</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-JS" role="tabpanel" aria-labelledby="nav-JS-tab">
+              <div class="navApi">
+                let comi=348;<br>    
+            
+                tzMes=tz/mesCant;
+                let Mes=(CantDes / mesCant) + (tzMes);<br>
+                let tot = (CantDes + comi) + tzAnual;<br>
+                let neto = CantDes - comi;<br>
+                console.log(mesCant)<br>
+                pagMen.innerHTML= '$'+ (new Intl.NumberFormat('es-MX').format(Mes.toFixed(2)));<br>
+                
+                net.innerHTML = '$'+ (new Intl.NumberFormat('es-MX').format(neto.toFixed(2))); <br>
+                totP.innerHTML = '$'+ (new Intl.NumberFormat('es-MX').format(tot.toFixed(2)));<br>
+      
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-Css" role="tabpanel" aria-labelledby="nav-Css-tab">
+              <div class="navApi">
+
+                <p>
+                 <span style="color:  red;"> header</span>{<br>
+                    margin-top: 1%;<br>
+                  }<br>
+                  
+                  <span style="color:  rgb(255, 145, 0);"> section </span>{<br>
+                   padding-top: 20%;<br>
+                  }
+                 
+                 <span style="color:  rgb(255, 145, 0);"> p</span>{<br>
+                   font-size: 14px;<br>
+                 }<br>
+                </p>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-Api" role="tabpanel" aria-labelledby="nav-Api-tab">
+              <div class="navApi">
+
+                <p>
+                  <span style="color: rgb(0, 110, 255);">function </span> iniciarMap(){<br>
+                  <span style="color: rgb(255, 145, 0);">var</span> coord = {lat:-34.5956145 ,lng: -58.4431949};<br>
+                <span style="color: rgb(255, 145, 0);">var</span> map = new google.maps.Map(document.getElementById('map'),{<br>
+                      zoom: 10,<br>
+                      center: coord<br>
+                    });<br>
+                  <span style="color: rgb(255, 145, 0);">var</span> marker = new google.maps.Marker({<br>
+                      position: coord,<br>
+                      map: map<br>
+                    });<br>
+                  }<br>
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <section class="container-md" id="pricing">
+      <div>
+        <h2 class="text-center title">Flexible Pricing</h2>
+        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptas inventore dolorum deserunt officia in porro dignissimos quo odio harum fugit omnis iure, quae numquam corrupti, tempora repellendus iusto. Rem.</p>
+      </div>
+        <div class="col-md-12 end-0"  id="PrecioMenu">
+         <nav>
+          <div  class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="buttonHz nav-link active" id="nav-Mon-tab" data-bs-toggle="tab" data-bs-target="#nav-Mon" type="button" role="tab" aria-controls="nav-Mon" aria-selected="true">Monthly</button>
+            <button class="buttonHz nav-link" id="nav-Year-tab" data-bs-toggle="tab" data-bs-target="#nav-Year" type="button" role="tab" aria-controls="nav-Year" aria-selected="false">Yearly</button>
+          </div>
+         </nav>
+         <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-Mon" role="tabpanel" aria-labelledby="nav-Mon-tab">
+            <div id="preciosMs" class="pSeccion">
+              <div class="card-group">
+                <div class="padding-top card text-center">
+                  <h3 >Free</h3>
+                  <h5>&dollar;<span class="bold-Num">0</span>/ month</h5>
+                  <div class="card-body text-start">
+                    <ul class=" noneList card-text">
+                      <li><span>1</span> User Account</li>
+                      <li><span>10</span> Tearm Members</li>
+                      <li><span>Unlimited</span> Emails Accounts</li>
+                      <li>Set And Manager Permissions</li>
+                      <dd>API &amp; extencion support</dd>
+                      <dd>Devoloper support</dd>
+                      <dd>A &frasl; B Testing</dd>
+                    </ul>
+                  </div>
+                  <div style="padding-bottom: 10%;">
+                    <button style="text-align: center !important;" class="bt-az  float-center" >Sign up</button>
+                  </div>
+                </div>
+                <div class="padding-top card text-center">
+                  <h3 >STARTUP</h3>
+                  <h5>&dollar;<span class="bold-Num">29</span>/ month</h5>
+                  <div class="card-body text-start">
+                    <ul class=" noneList card-text">
+                      <li><span>10</span> User Account</li>
+                      <li><span>100</span> Tearm Members</li>
+                      <li><span>Unlimited</span> Emails Accounts</li>
+                      <li>Set And Manager Permissions</li>
+                      <li>API &amp; extencion support</li>
+                      <dd>Devoloper support</dd>
+                      <dd>A &frasl; B Testing</dd>
+
+                    </ul>
+                  </div>
+                  <div style="padding-bottom: 10%;">
+                    <button style="text-align: center !important;" class="bt-az  float-center" >Sign up</button>
+                  </div>
+                </div>
+                <div class="padding-top card text-center">
+                  <h3 >PRO</h3>
+                  <h5>&dollar;<span class="bold-Num">49</span>/ month</h5>
+                  <div class="card-body text-start">
+                    <ul class=" noneList card-text">
+                      <li><span>50</span> User Account</li>
+                      <li><span>500</span> Tearm Members</li>
+                      <li><span>Unlimited</span> Emails Accounts</li>
+                      <li>Set And Manager Permissions</li>
+                      <li>API &amp; extencion support</li>
+                      <li>Devoloper support</li>
+                      <dd>A &frasl; B Testing</dd>
+
+                    </ul>
+                  </div>
+                  <div style="padding-bottom: 10%;">
+                    <button style="text-align: center !important;" class="bt-az  float-center" >Sign up</button>
+                  </div>
+                </div>
+                <div class="padding-top card text-center">
+                  <h3 >Ultra</h3>
+                  <h5>&dollar;<span class="bold-Num">99</span>/ month</h5>
+                  <div class="card-body text-start">
+                    <ul class=" noneList card-text">
+                      <li><span>Unlimited</span> User Account</li>
+                      <li><span>Unlimited</span> Tearm Members</li>
+                      <li><span>Unlimited</span> Emails Accounts</li>
+                      <li>Set And Manager Permissions</li>
+                      <li>API &amp; extencion support</lo>
+                      <li>Devoloper support</li>
+                      <li>A &frasl; B Testing</li>
+
+                    </ul>
+                    
+                  </div>
+                  <div style="padding-bottom: 10%;">
+                    <button style="text-align: center !important;" class="bt-az  float-center" >Sign up</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="tab-pane fade" id="nav-Year" role="tabpanel" aria-labelledby="nav-Year-tab">
+              <div id="preciosYr" class="pSeccion">
+                <div class="card-group">
+                  <div class="padding-top card text-center">
+                    <h3>STARTUP</h3>
+                    <h5>&dollar;<span class="bold-Num">348</span>/ year</h5>
+                    <div class="card-body text-start">
+                      <ul class=" noneList card-text">
+                        <li><span>10</span> User Account</li>
+                        <li><span>100</span> Tearm Members</li>
+                        <li><span>Unlimited</span> Emails Accounts</li>
+                        <li>Set And Manager Permissions</li>
+                        <li>API &amp; extencion support</li>
+                        <dd>Devoloper support</dd>
+                        <dd>A &frasl; B Testing</dd>
+  
+                      </ul>
+                    </div>
+                    <div style="padding-bottom: 10%;">
+                      <button style="text-align: center !important;" class="bt-az  float-center" >Sign up</button>
+                    </div>
+                  </div>
+                  <div class="padding-top card text-center">
+                    <h3 >PRO</h3>
+                    <h5>&dollar;<span class="bold-Num">588</span>/ month</h5>
+                    <div class="card-body text-start">
+                      <ul class=" noneList card-text">
+                        <li><span>50</span> User Account</li>
+                        <li><span>500</span> Tearm Members</li>
+                        <li><span>Unlimited</span> Emails Accounts</li>
+                        <li>Set And Manager Permissions</li>
+                        <li>API &amp; extencion support</li>
+                        <li>Devoloper support</li>
+                        <dd>A &frasl; B Testing</dd>
+  
+                      </ul>
+                    </div>
+                    <div style="padding-bottom: 10%;">
+                      <button style="text-align: center !important;" class="bt-az  float-center" >Sign up</button>
+                    </div>
+                  </div>
+                  <div class="padding-top card text-center">
+                    <h3 >Ultra</h3>
+                    <h5>&dollar;<span  class="bold-Num">1,118</span> / year</h5>
+                    <div class="card-body text-start">
+                      <ul class=" noneList card-text">
+                        <li><span>Unlimited</span> User Account</li>
+                        <li><span>Unlimited</span> Tearm Members</li>
+                        <li><span>Unlimited</span> Emails Accounts</li>
+                        <li>Set And Manager Permissions</li>
+                        <li>API &amp; extencion support</lo>
+                        <li>Devoloper support</li>
+                        <li>A &frasl; B Testing</li>
+  
+                      </ul>
+                      
+                    </div>
+                    <div style="padding-bottom: 10%;">
+                      <button style="text-align: center !important;" class="bt-az  float-center" >Sign up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+
+    </section>
+    
+    <section  class="bgMaps pSeccion " id="Map">
+      
+        <h2 style="padding: 3%;" class="title text-center position-relative ">Truested by world experts</h2>
+        <img style="width:4%;" class=" border-light rounded-circle shadow-lg p-1 mb-5 bg-body rounded position-relative top-1 end-1 " src="./Assets/avatar-1.jpg" alt="">
+        <img style="width:4%;"class="border-light rounded-circle shadow-lg p-1 mb-5 bg-body rounded position-relative top-2 end-2" src="./Assets/avatar-2.jpg" alt="">
+        <img style="width:6%;" class="border-light rounded-circle shadow-lg p-1 mb-5 bg-body rounded position-relative top-3 end-3" src="./Assets/avatar-3.jpg" alt="">
+        <img style="width:4%;" class="border-light rounded-circle shadow-lg p-1 mb-5 bg-body rounded position-relative top-4 end-4" src="./Assets/avatar-4.jpg" alt="">
+        <img style="width:7%;" class="border-light rounded-circle shadow-lg p-1 mb-5 bg-body rounded position-relative top-5 end-5" src="./Assets/avatar-5.jpg" alt="">
+        <img style="width:7%;" class="border-light rounded-circle shadow-lg p-1 mb-5 bg-body rounded position-relative top-6 end-6 " src="./Assets/avatar-6.jpg" alt="">
+        <img style="width:4%;"class="border-light rounded-circle shadow-lg p-1 mb-5 bg-body rounded position-relative top-7 end-7" src="./Assets/avatar-2.jpg" alt="">
+      
+        <!-- <img  class="img-fluid sticky-top" src="./Assets/world-bg.png" alt="World">    -->
+      
+    </section>
+    <section  class="container-md " id="Quest">
+      <div class="row" >
+        <div class="col col-md-6 ">
+          <h2 class="title" >Frequently asked question</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eveniet fuga fugiat dignissimos odio voluptatem suscipit beatae, consectetur harum iste. Veniam perspiciatis possimus soluta ut corrupti dolorum ipsum aliquam? Minus?</p>
+          <ul class="noneList">
+            <li><h6> Simple and smart HTML code</h6></li>
+            <li> <h6>  Works reintegrated in any part of the layout </h6></li>
+            <li> <h6> Reuse the element from one design to another </h6> </li>
+            
+          </ul>
+        </div>
+        <div class="col accordion col-md-6" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Installing the App on all devices
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, a. Sequi, blanditiis harum! Aut, sequi porro. Sequi labore nulla facilis tenetur, similique deserunt repellat aperiam optio cumque repudiandae in sit.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                how to implement and manager Api key
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi veniam inventore id quos sunt eos expedita libero. Aut praesentium animi ex quidem, ipsam neque, repellat, deserunt vitae distinctio tenetur inventore.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How to set up and optimize your account
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempore soluta molestiae doloremque delectus maiores in, beatae ullam sapiente reprehenderit nesciunt quos voluptatem non dicta eos quis quaerat debitis sit.
+              </div>
+            </div>
+          </div>
+           <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Manager your account acess and security settings
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi veniam inventore id quos sunt eos expedita libero. Aut praesentium animi ex quidem, ipsam neque, repellat, deserunt vitae distinctio tenetur inventore.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingfive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                Api integration basic overview
+              </button>
+            </h2>
+            <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi veniam inventore id quos sunt eos expedita libero. Aut praesentium animi ex quidem, ipsam neque, repellat, deserunt vitae distinctio tenetur inventore.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingsix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                Deactivating or deleting you account
+              </button>
+            </h2>
+            <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi veniam inventore id quos sunt eos expedita libero. Aut praesentium animi ex quidem, ipsam neque, repellat, deserunt vitae distinctio tenetur inventore.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+   <section style="padding-bottom: 10%;" class="container container-md" id="contac">
+      <div class="row row-cols-3 ">
+          <div class="col-3 col-sm-3 blSp">
+            <img src="./Assets/icons/icons-64-violet/support-64.png">
+            <h3>Help & Supoort</h3>
+            <p>Our 24/7 sopport team is here to help you and make sure our product is to date</p>
+            <div style="text-align: center;"><button class="bt-mo" >support@supportemaill.com</button> </div>
+          </div>
+          <div  class="col-3 col-sm-3  blSp">
+            <img src="./Assets/icons/icons-64-violet/globe-64.png">
+            <h3>Media &amp; Press</h3>
+            <p>Our 24/7 sopport team is here to help you and make sure our product is to date</p>
+            <div style="text-align: center;"><button class="bt-mo" >meida@supportemaill.com</button> </div>
+          </div>
+          <div class="col-3 col-sm-3 blSp ">
+            <img src="./Assets/icons/icons-64-violet/wallet-64.png">
+            <h3>Sales</h3>
+            <p>Our 24/7 sopport team is here to help you and make sure our product is to date</p>
+            <div style="text-align: center;"><button class="bt-mo" >sale@supportemaill.com</button> </div>
+            
+          </div>
+      </div>
+      <div class="row">
+        <div class=" col-12 " >
+          <div class="entra padding-top">
+            <img class=" col-2" src="./Assets/clients/clients-logo1.png" class="img-fluid" alt="">
+            <img class=" col-2" src="./Assets/clients/clients-logo2.png" class="img-fluid" alt="">
+            <img class=" col-2" src="./Assets/clients/clients-logo3.png" class="img-fluid" alt="">
+            <img class=" col-2" src="./Assets/clients/clients-logo4.png" class="img-fluid" alt="">
+            <img class=" col-2" src="./Assets/clients/clients-logo5.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    <footer style="padding-bottom:5% ; z-index: 0;  padding-top: 10%;" >
+      <div class="container-md">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class=" title">
+              Start <span class="bold" style="color: rgb(135, 0, 231);"> growing</span> your bussiness.
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ratione necessitatibus non sapiente quidem dolor, repellat doloremque aspernatur eveniet sit. Quas fugit illo nulla minima magni quisquam veniam consequatur quibusdam?</p>
+          </div>
+          <div style=" " class="col-md-6">
+            <button style="background-color:#0ad5eb ; color: white; border-color:#0ad5eb ;"  class=" align-middle col-md-6  rounded-pill border-3">GET STATE NOW</button>
+    
+          </div>
+        </div>
+        <div style="padding-top:6%;" class="row">
+          <div class="col-md-6 col-sm-6">
+            <h6>LATERAL</h6>
+            <dt>Copyright &#9400 LATERAL.l</dt>
+            <dt>All Rights Reserved. Proudly made in EU.</dt>
+            <div >
+              <a href="https://twitter.com/" target="_blank" ><img src="./Assets/social/black/twitter.png"></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="./Assets/social/black/facebook.png"></a>
+              <a href="https://mx.linkedin.com/" target="_blank"> <img src="./Assets/social/black/linkedin.png"></a>
+              
+              
+             
+            </div>
+  
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <h6>Company</h6>
+            <ul>
+              <li>About</li>
+              <li>Carrers</li>
+              <li>Awards</li>
+              <li>User Program</li>
+              <li>Location</li> 
+            </ul>          
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <h6>Products</h6>
+            <ul>
+              <li>Integration</li>
+              <li>Api</li>
+              <li>Pricing</li>
+              <li>Documentation</li>
+              <li>Release Note</li>
+              
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <h6>Support</h6>
+            <ul>
+              <li>Contac</li>
+              <li>FAQ</li>
+              <li>Press</li>
+              
+            </ul>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+
+    </footer>
+
+    
+   <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
+   <script defer type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>
